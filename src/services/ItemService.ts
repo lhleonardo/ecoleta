@@ -9,12 +9,10 @@ class ItemService {
     return await connection("items").select("*");
   }
 
-  async insert({ title, image }: ItemDTO): Promise<ItemDTO> {
-    const data: ItemDTO[] = await connection("items")
-      .insert({ title, image })
-      .returning("*");
+  async insert({ title, image }: ItemDTO) {
+    const data: ItemDTO[] = await connection("items").insert({ title, image });
 
-    return data[0];
+    return { id: data[0], title, image };
   }
 }
 

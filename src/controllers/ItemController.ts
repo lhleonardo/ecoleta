@@ -14,13 +14,13 @@ class ItemController {
 
     const persisted = await ItemService.insert(data);
 
-    return response.status(200).json({ data: persisted });
+    return response.status(200).json(persisted);
   }
 
   async getAll(request: Request, response: Response) {
     const items = await ItemService.getAll();
 
-    return response.status(200).json({ data: items });
+    return response.status(200).json({ items });
   }
 }
 

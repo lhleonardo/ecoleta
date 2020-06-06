@@ -1,7 +1,7 @@
 import express from "express";
 import path from "path";
 
-import routes from "./routes";
+import routes from "./routes/";
 
 const app = express();
 
@@ -10,6 +10,4 @@ app.use(routes);
 
 app.use("/uploads", express.static(path.resolve(__dirname, "..", "uploads")));
 
-app.listen(3000, () => {
-  console.log("Servidor iniciado na porta 3000");
-});
+app.listen(3000);
