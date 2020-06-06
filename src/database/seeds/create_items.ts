@@ -3,7 +3,7 @@ import Knex from "knex";
 const INITIAL_DATA = [
   {
     title: "Lâmpadas",
-    image: "lampada.svg",
+    image: "lampadas.svg",
   },
   {
     title: "Pilhas e Baterias",
